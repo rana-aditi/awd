@@ -1,0 +1,39 @@
+
+<html>
+<head>
+  <title> Inherit the properties from the parent Person class. </title>
+  <body>
+   <script>
+  class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    run() {
+        return ${this.name} can run;
+    }
+    sleep() {
+        return ${this.name} can sleep;
+    }
+}
+class Child extends Person {
+    constructor(name, age, Color) {
+        super(name, age);
+        this.Color = Color;
+    }
+    car() {
+        return "I have"+" "+this.Color+" "+" Color Car";
+    }
+}
+var a = window. prompt("Enter The Name of the Person : ");
+var b = window. prompt("Enter The Age of the Person: ");
+var c = window. prompt("Enter The Car Color of the Person: ");
+let obj = new Child(a, b, c);
+console.log(obj.run());
+console.log(obj.sleep());
+console.log(obj.car());
+console.log(obj.constructor());
+      </script>
+</body>
+</head>
+</html>
